@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Reshma Kadali — Content Production, Talent & Operations Lead. Portfolio covering production, dubbing, localisation, audio, talent and scripted content.">
+<title>Reshma Kadali — Content Production & Operations</title>
+<style>
+:root{
+  --bg:#f4f1ec; --paper:#fbfaf7; --ink:#171717; --muted:#68645e;
+  --line:#d9d4cc; --accent:#6c6a7f; --accent-dark:#505064;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.container{width:min(calc(100% - 40px),var(--max));margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(244,241,236,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navin{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.08em;font-size:14px}
+.navlinks{display:flex;gap:26px;font-size:13px;color:var(--muted)}
+.navlinks a:hover{color:var(--ink)}
+.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center;padding:70px 0}
+.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-dark);font-weight:700;margin-bottom:22px}
+h1{font-size:clamp(48px,8vw,94px);line-height:.93;letter-spacing:-.055em;margin:0 0 28px;font-weight:800}
+.hero p{max-width:650px;font-size:19px;color:var(--muted);margin:0 0 32px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 20px;border:1px solid var(--ink);font-size:13px;font-weight:700;transition:.2s}
+.btn.primary{background:var(--ink);color:white}
+.btn:hover{transform:translateY(-2px)}
+.hero-card{background:var(--accent);color:white;padding:34px;min-height:360px;display:flex;flex-direction:column;justify-content:space-between}
+.hero-card .big{font-size:70px;line-height:.9;font-weight:800;letter-spacing:-.06em}
+.hero-card p{color:#f2f1f4;font-size:14px}
+section{padding:105px 0;border-top:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:48px}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--accent-dark)}
+h2{font-size:clamp(34px,5vw,58px);letter-spacing:-.045em;line-height:1;margin:8px 0 0}
+.lead{max-width:560px;color:var(--muted);font-size:16px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.about p{font-size:19px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
+.stat{background:var(--paper);padding:28px}
+.stat strong{display:block;font-size:42px;letter-spacing:-.05em}
+.stat span{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);padding:30px;min-height:235px}
+.card .num{font-size:12px;color:var(--accent-dark);font-weight:700}
+.card h3{font-size:23px;margin:38px 0 12px;letter-spacing:-.03em}
+.card p{color:var(--muted);font-size:14px}
+.timeline{border-top:1px solid var(--ink)}
+.role{display:grid;grid-template-columns:220px 1fr 1.7fr;gap:35px;padding:28px 0;border-bottom:1px solid var(--line)}
+.role .date{font-size:13px;color:var(--muted)}
+.role h3{margin:0;font-size:18px}
+.role .company{font-size:12px;color:var(--accent-dark);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-top:5px}
+.role p{margin:0;color:var(--muted);font-size:14px}
+.workgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.work{background:var(--paper);border:1px solid var(--line);padding:28px}
+.work h3{margin:0 0 10px;font-size:21px}
+.work .tag{display:inline-block;font-size:10px;text-transform:uppercase;letter-spacing:.1em;background:#e8e5df;padding:5px 8px;margin-bottom:18px}
+.work p{color:var(--muted);font-size:14px}
+.platforms{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}
+.platforms span{border:1px solid var(--line);padding:8px 11px;font-size:12px;background:var(--paper)}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{padding:12px 15px;border:1px solid var(--line);background:var(--paper);font-size:13px}
+.contact{background:var(--ink);color:white;border-top:0}
+.contact .eyebrow{color:#c9c6d5}
+.contact h2{max-width:760px}
+.contact p{color:#c7c5c0;max-width:600px;font-size:17px}
+.contact a.email{display:inline-block;margin-top:28px;font-size:clamp(22px,4vw,40px);font-weight:700;border-bottom:2px solid white}
+.contact-row{display:flex;justify-content:space-between;gap:30px;align-items:end}
+footer{background:var(--ink);color:#8e8b86;padding:25px 0;font-size:11px;border-top:1px solid #333}
+footer .container{display:flex;justify-content:space-between}
+
+
+.work-filters{display:flex;gap:10px;flex-wrap:wrap;margin:-18px 0 30px}
+.filter{border:1px solid var(--line);background:transparent;padding:10px 17px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;cursor:pointer;color:var(--muted)}
+.filter.active,.filter:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.poster-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.poster-card{background:#111;color:#fff;border:1px solid #292929;overflow:hidden;transition:.22s}
+.poster-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.poster-card.hidden{display:none}
+.poster-visual{aspect-ratio:2/3;position:relative;overflow:hidden;background:#252525}
+.poster-visual img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:2}
+.poster-fallback{position:absolute;inset:0;display:flex;align-items:flex-end;padding:18px;background:linear-gradient(145deg,#4a4a4a,#111 65%);z-index:1}
+.poster-fallback:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 25%,rgba(0,0,0,.8))}
+.poster-fallback span{position:relative;z-index:2;font-weight:900;font-size:clamp(18px,1.8vw,28px);line-height:.95;letter-spacing:-.04em}
+.audio-poster{background:linear-gradient(145deg,#6c6a7f,#16161a 65%)}
+.poster-info{padding:16px 17px 19px}
+.poster-type{font-size:9px;color:#aaa;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.poster-info h3{font-size:16px;line-height:1.15;margin:0 0 7px}
+.poster-info p{font-size:12px;color:#aaa;margin:0}
+.poster-info p strong{color:#fff;font-weight:700}
+.poster-info p span{color:#888}
+.work-note{text-align:center;color:var(--muted);font-size:12px;margin:32px 0 0}
+
+@media(max-width:850px){
+ .hero{grid-template-columns:1fr;padding:55px 0}
+ .hero-card{min-height:260px}
+ .about{grid-template-columns:1fr;gap:40px}
+ .cards{grid-template-columns:1fr}
+ .role{grid-template-columns:1fr;gap:8px}
+ .workgrid{grid-template-columns:1fr}
+ .poster-grid{grid-template-columns:repeat(2,1fr)}
+ .section-head,.contact-row{display:block}
+ .lead{margin-top:20px}
+ .navlinks{display:none}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container navin">
+    <a class="logo" href="#top">RESHMA KADALI</a>
+    <div class="navlinks">
+      <a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<section class="hero" style="border-top:0">
+  <div class="container" style="grid-column:1/-1;display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center">
+    <div>
+      <div class="kicker">Content Production · Talent · Operations</div>
+      <h1>Stories.<br>People.<br>Production.</h1>
+      <p>I’m Reshma Kadali — a content production and operations professional working across OTT, dubbing & localisation, audio entertainment, scripted content and talent-led production.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#work">Explore My Work</a>
+        <a class="btn" href="#contact">Hire / Collaborate</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="big">5+<br>YEARS</div>
+      <p>Building and managing content workflows across international and regional entertainment — from development and casting to direction, QC and final delivery.</p>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">01 / About</div><h2>Production with a<br>creative lens.</h2></div><div class="lead">A hands-on professional who bridges creative teams, talent and operations to get content made — and delivered well.</div></div>
+    <div class="about">
+      <div>
+        <p>With 5+ years across OTT, audio entertainment, dubbing, localisation and episodic content, I manage end-to-end production workflows and coordinate writers, voice artists, sound engineers and production teams.</p>
+        <p>I work across international and regional content, with a strong focus on quality, timelines, cultural authenticity and audience-facing storytelling.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>100+</strong><span>OTT releases</span></div>
+        <div class="stat"><strong>40+</strong><span>Annual content projects</span></div>
+        <div class="stat"><strong>25+</strong><span>Audiobook titles</span></div>
+        <div class="stat"><strong>45+</strong><span>Scripted projects</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="eyebrow">02 / Selected Work</div><h2>Work I’ve been part of.</h2></div>
+      <div class="lead">Selected credits across voice acting, dubbing direction, localisation, anime, documentaries and audio entertainment.</div>
+    </div>
+    <div class="work-filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="film">Movies</button>
+      <button class="filter" data-filter="series">Series</button>
+      <button class="filter" data-filter="anime">Anime</button>
+      <button class="filter" data-filter="animation">Animation</button>
+      <button class="filter" data-filter="doc">Documentaries</button>
+      <button class="filter" data-filter="audio">Audio</button>
+    </div>
+    <div class="poster-grid">
+      <article class="poster-card" data-category="series">
+        <div class="poster-visual"><img src="https://www.impawards.com/2024/posters/glory.jpg" alt="GLORY poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>GLORY</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>GLORY</h3><p><strong>Joyna</strong> <span>· Sayani</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2023/posters/best_of_the_best.jpg" alt="BEST OF THE BEST poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>BEST OF THE BEST</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>BEST OF THE BEST</h3><p><strong>Maitreyi</strong> <span>· Mytreyi</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2025/posters/enola_holmes_3.jpg" alt="ENOLA HOLMES 3 poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>ENOLA HOLMES 3</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & QC</div><h3>ENOLA HOLMES 3</h3><p><strong>Project role</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2025/posters/materialists.jpg" alt="MATERIALISTS poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>MATERIALISTS</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>MATERIALISTS</h3><p><strong>Lucy</strong> <span>· Dakota</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2024/posters/madame_web.jpg" alt="MADAME WEB poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>MADAME WEB</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>MADAME WEB</h3><p><strong>Ezekiel</strong> <span>· Dakota</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2023/posters/anyone_but_you.jpg" alt="ANYONE BUT YOU poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>ANYONE BUT YOU</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>ANYONE BUT YOU</h3><p><strong>Beatrice</strong> <span>· Sydney Sweeney</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2018/posters/venom.jpg" alt="VENOM poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>VENOM</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>VENOM</h3><p><strong>Sadie</strong> <span>· Clark</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2025/posters/anaconda.jpg" alt="ANACONDA poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>ANACONDA</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>ANACONDA</h3><p><strong>Project role</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2024/posters/kraven_the_hunter.jpg" alt="KRAVEN poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>KRAVEN</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>KRAVEN</h3><p><strong>Calypso</strong> <span>· Ariana</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><div class="poster-fallback"><span>JAZZ CITY</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>JAZZ CITY</h3><p><strong>Kaberi</strong> <span>· Tanika Basu</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><div class="poster-fallback"><span>THE CHRONICLES OF THE 4.5 GANG</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>THE CHRONICLES OF THE 4.5 GANG</h3><p><strong>Ramani</strong> <span>· Darshana Rajendran</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><div class="poster-fallback"><span>SPIDER-MAN'S ASSISTANT</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>SPIDER-MAN'S ASSISTANT</h3><p><strong>AI Voice</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2023/posters/big_george_foreman.jpg" alt="BIG GEORGE FOREMAN poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>BIG GEORGE FOREMAN</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>BIG GEORGE FOREMAN</h3><p><strong>Mary Joan</strong> <span>· Jasmine Mathews</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2024/posters/no_way_up.jpg" alt="NO WAY UP poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>NO WAY UP</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>NO WAY UP</h3><p><strong>Ava</strong> <span>· Sophie McIntosh</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2023/posters/saw_x.jpg" alt="SAW X poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>SAW X</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>SAW X</h3><p><strong>Cecelia Pederson</strong> <span>· Synnøve Macody Lund</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2023/posters/cobweb.jpg" alt="COBWEB poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>COBWEB</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>COBWEB</h3><p><strong>Miss Devine</strong> <span>· Cleopatra Coleman</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2023/posters/freelance.jpg" alt="FREELANCE poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>FREELANCE</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>FREELANCE</h3><p><strong>Clarie</strong> <span>· Alison Brie</span></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><div class="poster-fallback"><span>SHELL</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>SHELL</h3><p><strong>Samantha</strong> <span>· Elisabeth Moss</span></p></div>
+      </article>
+      <article class="poster-card" data-category="series">
+        <div class="poster-visual"><div class="poster-fallback"><span>LUPIN</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>LUPIN</h3><p><strong>Sophila Belkacem</strong> <span>· Shirine Boutella</span></p></div>
+      </article>
+      <article class="poster-card" data-category="series">
+        <div class="poster-visual"><div class="poster-fallback"><span>SEX EDUCATION</span></div></div>
+        <div class="poster-info"><div class="poster-type">Voice Acting</div><h3>SEX EDUCATION</h3><p><strong>Ola</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="film">
+        <div class="poster-visual"><img src="https://www.impawards.com/2025/posters/the_karate_kid_legends.jpg" alt="THE KARATE KID poster" loading="lazy" onerror="this.style.display='none'"><div class="poster-fallback"><span>THE KARATE KID</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director</div><h3>THE KARATE KID</h3><p><strong>Project role</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>THAT TIME I GOT REINCARNATED AS A SLIME</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>THAT TIME I GOT REINCARNATED AS A SLIME</h3><p><strong>Great Sage</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>DR. STONE</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>DR. STONE</h3><p><strong>Kohaku</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>SHANGRI-LA FRONTIER</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>SHANGRI-LA FRONTIER</h3><p><strong>Many</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>DEAD MOUNT DEATH PLAY</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>DEAD MOUNT DEATH PLAY</h3><p><strong>Clarissa</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>FRIEREN: BEYOND THE JOURNEY'S END</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>FRIEREN: BEYOND THE JOURNEY'S END</h3><p><strong>Mana…etc</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>TOWER OF GOD</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>TOWER OF GOD</h3><p><strong>Project role</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>THE GOD OF HIGH SCHOOL</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>THE GOD OF HIGH SCHOOL</h3><p><strong>Project role</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>KITERETSU</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>KITERETSU</h3><p><strong>Mom</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>FIRE FORCE</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>FIRE FORCE</h3><p><strong>Haumea</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="anime">
+        <div class="poster-visual"><div class="poster-fallback"><span>WIND BREAKER</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director, Voice Actor & Writer</div><h3>WIND BREAKER</h3><p><strong>Kotohha</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="animation">
+        <div class="poster-visual"><div class="poster-fallback"><span>MR. BEAN ANIMATED SERIES</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>MR. BEAN ANIMATED SERIES</h3><p><strong>Old Lady Owner</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="doc">
+        <div class="poster-visual"><div class="poster-fallback"><span>SNAKES SOS: GOA'S WILDEST</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>SNAKES SOS: GOA'S WILDEST</h3><p><strong>Project role</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="doc">
+        <div class="poster-visual"><div class="poster-fallback"><span>EUROPE'S WILD PLACES</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>EUROPE'S WILD PLACES</h3><p><strong>Project role</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="doc">
+        <div class="poster-visual"><div class="poster-fallback"><span>POSTCARDS FROM MEGHALAYA</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>POSTCARDS FROM MEGHALAYA</h3><p><strong>Project role</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="doc">
+        <div class="poster-visual"><div class="poster-fallback"><span>THE INDIAN STAR TURTLE</span></div></div>
+        <div class="poster-info"><div class="poster-type">Dubbing Director & Voice Actor</div><h3>THE INDIAN STAR TURTLE</h3><p><strong>Project role</strong></p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>DHRUVA 2500 AD</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>DHRUVA 2500 AD</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>BHAIRAVI</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>BHAIRAVI</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>MANTRA</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>MANTRA</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>JAGADEEKA VEERUDU</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>JAGADEEKA VEERUDU</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>ROWDY BABY</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>ROWDY BABY</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>KANNULLO NE RUPAME</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>KANNULLO NE RUPAME</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>NUVVE NA DESTINY</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>NUVVE NA DESTINY</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>KANNULLO NE RUPAME 2</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>KANNULLO NE RUPAME 2</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>CHIRUTHA</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production & Voice</div><h3>CHIRUTHA</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>MADHURAME E HRUDHAYAM</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>MADHURAME E HRUDHAYAM</h3><p>Selected audiobook credit</p></div>
+      </article>
+      <article class="poster-card" data-category="audio">
+        <div class="poster-visual"><div class="poster-fallback audio-poster"><span>KHADGHAM</span></div></div>
+        <div class="poster-info"><div class="poster-type">Audiobook Production</div><h3>KHADGHAM</h3><p>Selected audiobook credit</p></div>
+      </article></div>
+    <p class="work-note">More credits available across 100+ OTT releases, 25+ audiobook titles and 45+ scripted projects.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">03 / Credits</div><h2>Selected credits.</h2></div><div class="lead">Selected titles from film, anime, animation, documentary and audio work.</div></div>
+    <div class="workgrid">
+      <article class="work"><span class="tag">Film & OTT</span><h3>Venom · Bad Boys · Kraven The Hunter</h3><p>Selected dubbing/localisation work, alongside Anyone But You, Madame Web, Saw X, Freelance, Materialists, Karate Kid and 50+ additional movies across platforms.</p></article>
+      <article class="work"><span class="tag">Anime & Animation</span><h3>Frieren · Dr. Stone · Wind Breaker</h3><p>Selected work includes That Time I Got Reincarnated as a Slime, Shangri-La Frontier, Dead Mount Death Play, Tower of God, Fire Force, Kiteretsu, Mr Bean Animated Series and more.</p></article>
+      <article class="work"><span class="tag">Documentary / Series</span><h3>Snakes SOS · Europe’s Wild Places</h3><p>Work across documentary and series content including Goa’s Wildest, Europe’s Wildest Places, Postcards from Meghalaya, Enola Holmes 3 and Glory (Hindi).</p></article>
+      <article class="work"><span class="tag">Audiobooks</span><h3>Dhruva 2500 AD · Bhairavi · Chirutha</h3><p>End-to-end audiobook production across 25+ titles, including Mantra, Jagadeeka Veerudu, Rowdy Baby, Kannullo Ne Rupame, Nuvve Na Destiny, Khadgham and more.</p></article>
+    </div>
+    <div class="platforms"><span>Netflix</span><span>Prime Video</span><span>Crunchyroll</span><span>Sony</span><span>Lionsgate</span><span>Warner Bros.</span><span>Pocket FM</span><span>Kuku FM</span><span>Earhook</span></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">04 / Experience</div><h2>Where I’ve worked.</h2></div><div class="lead">Roles across operations, localisation, audio production and scripted content.</div></div>
+    <div class="timeline">
+      <div class="role"><div class="date">2025 — 2026</div><div><h3>Operations Lead</h3><div class="company">ShareChat — Telugu</div></div><p>Led end-to-end production of high-volume micro-drama and localisation content; coordinated creative and production teams, script development, localisation, QC and delivery, while using audience insights to refine content strategy.</p></div>
+      <div class="role"><div class="date">Nov 2023 — Present</div><div><h3>Dubbing & Localisation Expert</h3><div class="company">Prime Focus Technologies</div></div><p>Direct and manage dubbing and localisation projects for leading global entertainment platforms. Supervise voice artists, sound engineers and production teams; oversee script adaptation and dialogue direction with a focus on cultural authenticity, emotional performance and platform requirements.</p></div>
+      <div class="role"><div class="date">2022 — 2024</div><div><h3>Production Associate</h3><div class="company">Pocket FM</div></div><p>Managed audio content production across fiction and non-fiction, supporting content development, script development, creative direction and final delivery while improving workflow and production quality.</p></div>
+      <div class="role"><div class="date">2022 — 2024</div><div><h3>Creative Manager</h3><div class="company">Earhook</div></div><p>Spearheaded the development and launch of high-quality audiobooks, managing end-to-end production across 25+ titles and collaborating with writers, voice artists and audio engineers.</p></div>
+      <div class="role"><div class="date">2021 — Present</div><div><h3>Writer & Script Developer</h3><div class="company">Freelance</div></div><p>Developed and adapted scripts for Pocket FM, Kuku FM, Earhook and digital platforms, delivering 45+ audio and scripted projects across fiction, animation, anime and documentary content.</p></div>
+      <div class="role"><div class="date">2021 — Present</div><div><h3>Voice Actor & Audiobook Narrator</h3><div class="company">Freelance</div></div><p>Voice work across 15+ fiction and non-fiction audiobooks and across films, anime, web series, animation, YouTube and EdTech content, specialising in character modulation and emotional delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">05 / Expertise</div><h2>What I bring.</h2></div></div>
+    <div class="skills">
+      <span class="skill">Production Management</span><span class="skill">Project Coordination</span><span class="skill">Team Leadership</span><span class="skill">Audio Production</span><span class="skill">Dubbing & Localisation</span><span class="skill">Creative Direction</span><span class="skill">Quality Control</span><span class="skill">Workflow Optimisation</span><span class="skill">Script Development</span><span class="skill">Talent Coordination</span><span class="skill">Voice Direction</span><span class="skill">Content Operations</span>
+    </div>
+    <div style="margin-top:42px;color:var(--muted);font-size:13px">Languages: <strong style="color:var(--ink)">Telugu — Native</strong> · <strong style="color:var(--ink)">English — Fluent</strong> · <strong style="color:var(--ink)">Hindi — Professional</strong></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-row">
+      <div>
+        <div class="eyebrow">06 / Contact</div>
+        <h2>Have a project,<br>role or story?</h2>
+        <p>I’m open to opportunities across content production, operations, talent, dubbing/localisation, audio and scripted entertainment.</p>
+        <a class="email" href="mailto:reshmakadali99@gmail.com">reshmakadali99@gmail.com</a>
+      </div>
+      <div style="margin-top:35px;font-size:14px;color:#c7c5c0">
+        Hyderabad, Telangana<br>
+        +91 94947 31869
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="container"><span>© Reshma Kadali</span><span>Content · Talent · Operations</span></div></footer>
+
+<script>
+document.querySelectorAll('.filter').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter=btn.dataset.filter;
+    document.querySelectorAll('.poster-card').forEach(card=>{
+      card.classList.toggle('hidden', filter!=='all' && card.dataset.category!==filter);
+    });
+  });
+});
+</script>
+</body>
+</html>
